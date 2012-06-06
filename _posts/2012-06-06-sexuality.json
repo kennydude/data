@@ -1,0 +1,17 @@
+---
+title: Sexuality
+layout: entry
+description: List of Sexualities. <strong>DO NOT USE UNLESS YOU NEED TO FOR RESEARCH. THANK YOU</strong>
+---
+{
+	"fields" : ["Slang Name", "Official Name", "3-letter Code"],
+	"data" : [
+		["Gay", "Homosexual", "MSM"],
+		["Lesbian", "Lesbian", "WSW"],
+		["Bi", "Bisexual", "MAW"],
+		["Pansexaul", "Pansexual", "PAN"],
+		["Asexual", "Asexual", "ASX"],
+		["Unsure", "Questioning", "QUS"],
+		["Hetro", "Hetrosexual", "HTR"]
+	]
+}
