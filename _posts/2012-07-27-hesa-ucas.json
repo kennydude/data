@@ -1,0 +1,833 @@
+---
+layout: entry
+title: HESA/UCAS Conversion
+---
+{
+    "fields": [
+        "HESA Code",
+        "University Name",
+        "UCAS Code"
+    ],
+    "data": [
+        [
+            "0001",
+            "The Open University",
+            ""
+        ],
+        [
+            "0002",
+            "Cranfield University",
+            ""
+        ],
+        [
+            "0003",
+            "Royal College of Art",
+            ""
+        ],
+        [
+            "0007",
+            "Bishop Grosseteste University College Lincoln",
+            "R38"
+        ],
+        [
+            "0009",
+            "Buckinghamshire New University",
+            "B94"
+        ],
+        [
+            "0010",
+            "Central School of Speech and Drama",
+            "C35"
+        ],
+        [
+            "0011",
+            "University of Chester",
+            "C55"
+        ],
+        [
+            "0012",
+            "Canterbury Christ Church University",
+            "C10"
+        ],
+        [
+            "0013",
+            "York St John University",
+            "Y75"
+        ],
+        [
+            "0014",
+            "University College Plymouth St Mark and St John",
+            ""
+        ],
+        [
+            "0016",
+            "Edge Hill University",
+            "E42"
+        ],
+        [
+            "0017",
+            "University College Falmouth",
+            "F33"
+        ],
+        [
+            "0018",
+            "Harper Adams University College",
+            "H12"
+        ],
+        [
+            "0021",
+            "The University of Winchester",
+            "W76"
+        ],
+        [
+            "0023",
+            "Liverpool Hope University",
+            "L46"
+        ],
+        [
+            "0024",
+            "University of the Arts London",
+            "U65"
+        ],
+        [
+            "0026",
+            "University of Bedfordshire",
+            "B22"
+        ],
+        [
+            "0027",
+            "The University of Northampton",
+            "N38"
+        ],
+        [
+            "0028",
+            "Newman University College",
+            "N36"
+        ],
+        [
+            "0030",
+            "Ravensbourne",
+            "R06"
+        ],
+        [
+            "0031",
+            "Roehampton University",
+            "R48"
+        ],
+        [
+            "0032",
+            "Rose Bruford College",
+            "R51"
+        ],
+        [
+            "0033",
+            "Royal Academy of Music",
+            ""
+        ],
+        [
+            "0034",
+            "Royal College of Music",
+            ""
+        ],
+        [
+            "0035",
+            "Royal Northern College of Music",
+            ""
+        ],
+        [
+            "0037",
+            "Southampton Solent University",
+            "S30"
+        ],
+        [
+            "0038",
+            "University of Cumbria",
+            "C99"
+        ],
+        [
+            "0039",
+            "St Mary's University College, Twickenham",
+            "S64"
+        ],
+        [
+            "0040",
+            "Leeds Trinity University College",
+            "L24"
+        ],
+        [
+            "0041",
+            "Trinity Laban Conservatoire of Music and Dance",
+            ""
+        ],
+        [
+            "0046",
+            "The University of Worcester",
+            "W80"
+        ],
+        [
+            "0047",
+            "Anglia Ruskin University",
+            "A60"
+        ],
+        [
+            "0048",
+            "Bath Spa University",
+            "B20"
+        ],
+        [
+            "0049",
+            "The University of Bolton",
+            "B44"
+        ],
+        [
+            "0050",
+            "Bournemouth University",
+            "B50"
+        ],
+        [
+            "0051",
+            "The University of Brighton",
+            "B72"
+        ],
+        [
+            "0052",
+            "Birmingham City University",
+            "B25"
+        ],
+        [
+            "0053",
+            "The University of Central Lancashire",
+            "L14"
+        ],
+        [
+            "0054",
+            "University of Gloucestershire",
+            "G50"
+        ],
+        [
+            "0056",
+            "Coventry University",
+            "C85"
+        ],
+        [
+            "0057",
+            "University of Derby",
+            "D39"
+        ],
+        [
+            "0058",
+            "The University of East London",
+            "E28"
+        ],
+        [
+            "0059",
+            "The University of Greenwich",
+            "G70"
+        ],
+        [
+            "0060",
+            "University of Hertfordshire",
+            "H36"
+        ],
+        [
+            "0061",
+            "The University of Huddersfield",
+            "H60"
+        ],
+        [
+            "0062",
+            "The University of Lincoln",
+            "L39"
+        ],
+        [
+            "0063",
+            "Kingston University",
+            "K84"
+        ],
+        [
+            "0064",
+            "Leeds Metropolitan University",
+            "L27"
+        ],
+        [
+            "0065",
+            "Liverpool John Moores University",
+            "L51"
+        ],
+        [
+            "0066",
+            "The Manchester Metropolitan University",
+            "M40"
+        ],
+        [
+            "0067",
+            "Middlesex University",
+            "M80"
+        ],
+        [
+            "0068",
+            "De Montfort University",
+            "D26"
+        ],
+        [
+            "0069",
+            "The University of Northumbria at Newcastle",
+            "N77"
+        ],
+        [
+            "0071",
+            "The Nottingham Trent University",
+            "N91"
+        ],
+        [
+            "0072",
+            "Oxford Brookes University",
+            "O66"
+        ],
+        [
+            "0073",
+            "The University of Plymouth",
+            "P60"
+        ],
+        [
+            "0074",
+            "The University of Portsmouth",
+            "P80"
+        ],
+        [
+            "0075",
+            "Sheffield Hallam University",
+            "S21"
+        ],
+        [
+            "0076",
+            "London South Bank University",
+            "L75"
+        ],
+        [
+            "0077",
+            "Staffordshire University",
+            "S72"
+        ],
+        [
+            "0078",
+            "The University of Sunderland",
+            "S84"
+        ],
+        [
+            "0079",
+            "The University of Teesside",
+            "T20"
+        ],
+        [
+            "0080",
+            "Thames Valley University",
+            ""
+        ],
+        [
+            "0081",
+            "University of the West of England, Bristol",
+            "B80"
+        ],
+        [
+            "0082",
+            "The University of Chichester",
+            "B58"
+        ],
+        [
+            "0083",
+            "The University of Westminster",
+            "W50"
+        ],
+        [
+            "0085",
+            "The University of Wolverhampton",
+            "W75"
+        ],
+        [
+            "0086",
+            "The University of Wales, Newport",
+            "N37"
+        ],
+        [
+            "0087",
+            "Glyndwr University",
+            "G53"
+        ],
+        [
+            "0089",
+            "University of Wales Institute, Cardiff",
+            ""
+        ],
+        [
+            "0090",
+            "University of Glamorgan",
+            "G14"
+        ],
+        [
+            "0091",
+            "Swansea Metropolitan University",
+            "S96"
+        ],
+        [
+            "0092",
+            "Trinity University College",
+            "L24"
+        ],
+        [
+            "0095",
+            "University of Abertay Dundee",
+            "A30"
+        ],
+        [
+            "0096",
+            "Edinburgh College of Art",
+            ""
+        ],
+        [
+            "0097",
+            "Glasgow School of Art",
+            "G43"
+        ],
+        [
+            "0100",
+            "Queen Margaret University, Edinburgh",
+            "Q25"
+        ],
+        [
+            "0101",
+            "The Royal Scottish Academy of Music and Drama",
+            ""
+        ],
+        [
+            "0104",
+            "The Robert Gordon University",
+            "R36"
+        ],
+        [
+            "0105",
+            "The University of the West of Scotland",
+            "U40"
+        ],
+        [
+            "0106",
+            "Glasgow Caledonian University",
+            "G28"
+        ],
+        [
+            "0107",
+            "Edinburgh Napier University",
+            "E59"
+        ],
+        [
+            "0108",
+            "Aston University",
+            "A80"
+        ],
+        [
+            "0109",
+            "The University of Bath",
+            "B16"
+        ],
+        [
+            "0110",
+            "The University of Birmingham",
+            "B32"
+        ],
+        [
+            "0111",
+            "The University of Bradford",
+            "B56"
+        ],
+        [
+            "0112",
+            "The University of Bristol",
+            "B78"
+        ],
+        [
+            "0113",
+            "Brunel University",
+            "B84"
+        ],
+        [
+            "0114",
+            "The University of Cambridge",
+            "C05"
+        ],
+        [
+            "0115",
+            "The City University",
+            "C60"
+        ],
+        [
+            "0116",
+            "University of Durham",
+            "D86"
+        ],
+        [
+            "0117",
+            "The University of East Anglia",
+            "E14"
+        ],
+        [
+            "0118",
+            "The University of Essex",
+            "E70"
+        ],
+        [
+            "0119",
+            "The University of Exeter",
+            "E84"
+        ],
+        [
+            "0120",
+            "The University of Hull",
+            "H72"
+        ],
+        [
+            "0121",
+            "The University of Keele",
+            "K12"
+        ],
+        [
+            "0122",
+            "The University of Kent",
+            "K24"
+        ],
+        [
+            "0123",
+            "The University of Lancaster",
+            "L14"
+        ],
+        [
+            "0124",
+            "The University of Leeds",
+            "L23"
+        ],
+        [
+            "0125",
+            "The University of Leicester",
+            "L34"
+        ],
+        [
+            "0126",
+            "The University of Liverpool",
+            "L41"
+        ],
+        [
+            "0127",
+            "Birkbeck College",
+            "B24"
+        ],
+        [
+            "0131",
+            "Goldsmiths College",
+            "G56"
+        ],
+        [
+            "0132",
+            "Imperial College of Science, Technology and Medicine",
+            "I50"
+        ],
+        [
+            "0133",
+            "Institute of Education",
+            "I30"
+        ],
+        [
+            "0134",
+            "King's College London",
+            "K83"
+        ],
+        [
+            "0135",
+            "London Business School",
+            ""
+        ],
+        [
+            "0137",
+            "London School of Economics and Political Science",
+            "L72"
+        ],
+        [
+            "0138",
+            "London School of Hygiene and Tropical Medicine",
+            ""
+        ],
+        [
+            "0139",
+            "Queen Mary and Westfield College",
+            "Q50"
+        ],
+        [
+            "0141",
+            "Royal Holloway and Bedford New College",
+            "R72"
+        ],
+        [
+            "0143",
+            "The Royal Veterinary College",
+            "R84"
+        ],
+        [
+            "0145",
+            "St George's Hospital Medical School",
+            ""
+        ],
+        [
+            "0146",
+            "The School of Oriental and African Studies",
+            "S09"
+        ],
+        [
+            "0147",
+            "The School of Pharmacy",
+            ""
+        ],
+        [
+            "0149",
+            "University College London",
+            "U80"
+        ],
+        [
+            "0151",
+            "University of London (Institutes and activities)",
+            ""
+        ],
+        [
+            "0152",
+            "Loughborough University",
+            "L79"
+        ],
+        [
+            "0154",
+            "The University of Newcastle-upon-Tyne",
+            "N21"
+        ],
+        [
+            "0155",
+            "The University of Nottingham",
+            "N91"
+        ],
+        [
+            "0156",
+            "The University of Oxford",
+            "O33"
+        ],
+        [
+            "0157",
+            "The University of Reading",
+            "R12"
+        ],
+        [
+            "0158",
+            "The University of Salford",
+            "S03"
+        ],
+        [
+            "0159",
+            "The University of Sheffield",
+            "S18"
+        ],
+        [
+            "0160",
+            "The University of Southampton",
+            "S27"
+        ],
+        [
+            "0161",
+            "The University of Surrey",
+            "S85"
+        ],
+        [
+            "0162",
+            "The University of Sussex",
+            "S90"
+        ],
+        [
+            "0163",
+            "The University of Warwick",
+            "W20"
+        ],
+        [
+            "0164",
+            "The University of York",
+            "Y50"
+        ],
+        [
+            "0167",
+            "The University of Edinburgh",
+            "E56"
+        ],
+        [
+            "0168",
+            "The University of Glasgow",
+            "G28"
+        ],
+        [
+            "0169",
+            "The University of Strathclyde",
+            "S78"
+        ],
+        [
+            "0170",
+            "The University of Aberdeen",
+            "A20"
+        ],
+        [
+            "0171",
+            "Heriot-Watt University",
+            "H24"
+        ],
+        [
+            "0172",
+            "The University of Dundee",
+            "D65"
+        ],
+        [
+            "0173",
+            "The University of St Andrews",
+            "S36"
+        ],
+        [
+            "0174",
+            "The University of Stirling",
+            "S75"
+        ],
+        [
+            "0175",
+            "Scottish Agricultural College",
+            "S01"
+        ],
+        [
+            "0176",
+            "The University of Wales, Lampeter",
+            ""
+        ],
+        [
+            "0177",
+            "Aberystwyth University",
+            "A40"
+        ],
+        [
+            "0178",
+            "Bangor University",
+            "B06"
+        ],
+        [
+            "0179",
+            "Cardiff University",
+            "C15"
+        ],
+        [
+            "0180",
+            "Swansea University",
+            "S93"
+        ],
+        [
+            "0184",
+            "The Queen's University of Belfast",
+            "Q75"
+        ],
+        [
+            "0185",
+            "University of Ulster",
+            "U20"
+        ],
+        [
+            "0188",
+            "The Institute of Cancer Research",
+            ""
+        ],
+        [
+            "0189",
+            "Writtle College",
+            "W85"
+        ],
+        [
+            "0190",
+            "Norwich University College of the Arts",
+            "N39"
+        ],
+        [
+            "0193",
+            "Stranmillis University College",
+            "S79"
+        ],
+        [
+            "0194",
+            "St Mary's University College",
+            "S64"
+        ],
+        [
+            "0195",
+            "Royal Agricultural College",
+            "R54"
+        ],
+        [
+            "0196",
+            "UHI Millennium Institute",
+            ""
+        ],
+        [
+            "0197",
+            "The Arts University College at Bournemouth",
+            "A66"
+        ],
+        [
+            "0199",
+            "Conservatoire for Dance and Drama",
+            ""
+        ],
+        [
+            "0200",
+            "University College Birmingham",
+            "B35"
+        ],
+        [
+            "0201",
+            "Courtauld Institute of Art",
+            "C80"
+        ],
+        [
+            "0202",
+            "London Metropolitan University",
+            "L68"
+        ],
+        [
+            "0203",
+            "The University of Buckingham",
+            "B90"
+        ],
+        [
+            "0204",
+            "The University of Manchester",
+            "M20"
+        ],
+        [
+            "0205",
+            "Heythrop College",
+            "H48"
+        ],
+        [
+            "0206",
+            "University for the Creative Arts",
+            "C93"
+        ],
+        [
+            "0207",
+            "Leeds College of Music",
+            "L30"
+        ],
+        [
+            "0208",
+            "Guildhall School of Music and Drama",
+            ""
+        ],
+        [
+            "0209",
+            "The Liverpool Institute for Performing Arts",
+            "L48"
+        ]
+    ]
+}
