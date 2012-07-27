@@ -115,6 +115,7 @@ function start(){
 			output = output += Mustache.render($("#enter").val(), da) + "\n";
 		});
 		$("#output").html(output);
+		$(".saveFormatted").show().attr("href", "data:text/plain;base64," + base64_encode( output ) );
 	});
 	$(".pleasewait").hide();
 }

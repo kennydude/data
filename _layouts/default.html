@@ -61,11 +61,16 @@
       {{ content }}
 
       <hr/>
-<a class="btn showLicense" onclick="$('#licenseModal').modal('show');">Data License</a>
-      <h6>
-        Powered by GitHub Pages + Bootstrap <div id="shareNice" data-share-label="Share me and tell your geeky friends!" data-color-scheme="black"
-    data-icon-size="32" data-panel-bottom="plain" data-services="plus.google.com,facebook.com,digg.com,email,delicious.com,twitter.com"></div>
-      </h6>
+<div class="row footer" style="padding-bottom: 30px">
+	<div class="span10">
+		<p>Powered by <a href="http://pages.github.com">GitHub Pages</a>, <a href="http://twitter.github.com/bootstrap">Bootstrap by Twitter</a>. Using parts from <a href="http://jsonlint.com">JSON Lint</a> and <a href="http://phpjs.org/functions/base64_encode">this php.js function</a> (which requires <a href="http://phpjs.org/functions/utf8_encode">this one too</a>). Oh and don't forget <a href="http://mustache.github.com">mustache</a>!</p>
+	</div>
+	<div class="span2">
+		<div id="shareNice" data-color-scheme="black" data-panel-bottom="plain"
+    data-icon-size="16" data-panel-bottom="plain" data-services="plus.google.com,facebook.com,digg.com,email,delicious.com,twitter.com"></div><br/>
+		<a class="btn showLicense" onclick="$('#licenseModal').modal('show');">Data License</a>
+	</div>
+</div>
 
     </div> <!-- /container -->
 

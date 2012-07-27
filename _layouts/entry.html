@@ -44,21 +44,24 @@ scripts: >
 		</tr>
 	</thead>
 </table>
-<a id="encode"></a>
-<h2>Encode:</h2>
-<p>
-	Enter in the field how you want the data to look using <code>{<span>{ FIELDNAME }</span>}</code> where FIELDNAME is one of the
-	headers on the table above. Then press Go
-</p>
-<h6>Note: Case Sensitive!</h6>
-<textarea id="enter"></textarea>
-<button id="go" class="btn btn-large btn-primary">Go</button>
-<pre id="output">press go</pre>
 
-      <hr/>
-      <h6>
-        Powered by GitHub Pages + Bootstrap
-      </h6>
+<a id="encode"></a><br/><br/>
+<div class="well span4 offset4">
+	<h1>Encode the data</h1>
+	<p>
+		Enter in the field how you want the data to look using <code>{<span>{ FIELDNAME }</span>}</code> where FIELDNAME is one of the headers on the table above. Then press the Go button. This uses <a href="http://mustache.github.com">mustache</a> templating engine
+	</p>
+	<div class="alert alert-warning">
+		<strong>Warning: It is case sensitive.</strong>
+			You can use the <i class="icon-plus-sign"></i> icons to add them straight into the text box
+	</div>
+	<textarea id="enter" style="width:100%;font-family:monospace"></textarea>
+	<button id="go" class="btn btn-primary">Go</button>
+	<hr/>
+	<span class="saveFormatted hide">
+	<a class="btn saveFormatted hide">Save formatted data as file</a><br/><br/></span>
+	<pre id="output">Press the GO button and the formatted data will appear here</pre>
+</div>
 
 <div class="modal hide" id="exportModal">
   <div class="modal-header">
