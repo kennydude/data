@@ -1,18 +1,22 @@
 ---
 layout: default
 ---
+<div class="page-header">
 
-<h1>Hello</h1>
-<p>
+<h1>Welcome to the DataBin
+<small>
 	This is a very simple Jekyll based site allowing you to get access
 	to readily available information, just much more dev-friendly! ^__^
-</p>
+</small></h1>
+</div>
 
 <h2>Data here:</h2>
-<ul>
+<table class="table table-striped table-bordered table-condensed">
+<tr><th>Data Name</th><th>Description</th></tr>
 {% for post in site.posts %}
-<li>
-<a href="{{ post.url | remove_first:'/' }}">{{ post.title }}</a>
-</li>
+<tr>
+<td><a href="{{ post.url | remove_first:'/' }}">{{ post.title }}</a></td>
+<td>{{ post.description }}</td>
+</tr>
 {% endfor %}
-</ul>
+</table>

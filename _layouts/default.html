@@ -13,7 +13,15 @@
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
-    </style>
+	body.editmode{
+		padding-top: 90px;
+	}
+	.navbar .editmode{
+		background: #FFF;
+		text-align: center;
+		padding: 10px;
+	}
+    </style><style id="eMode">.editmode{ display: none; }</style>
     <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -24,9 +32,12 @@
 
   <body>
 
-<a href="https://github.com/kennydude/data"><img style="position: absolute; top: 0; right: 0; border: 0;z-index:9999" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+<a href="https://github.com/kennydude/data"><img style="position: fixed; top: 0; right: 0; border: 0;z-index:9999" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
     <div class="navbar navbar-fixed-top">
+	<div class="editmode"><div class="container"><div class="span4 offset3">
+		You are in Edit Mode! <a class="close closeEditMode" style="float: none !important" href="#">&times;</a>
+	</div></div></div>
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -38,6 +49,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="index.html">Home</a></li>
+		<li><a class="showLicense" onclick="$('#licenseModal').modal('show');">Data License</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -49,11 +61,34 @@
       {{ content }}
 
       <hr/>
+<a class="btn showLicense" onclick="$('#licenseModal').modal('show');">Data License</a>
       <h6>
-        Powered by GitHub Pages + Bootstrap
+        Powered by GitHub Pages + Bootstrap <div id="shareNice" data-share-label="Share me and tell your geeky friends!" data-color-scheme="black"
+    data-icon-size="32" data-panel-bottom="plain" data-services="plus.google.com,facebook.com,digg.com,email,delicious.com,twitter.com"></div>
       </h6>
 
     </div> <!-- /container -->
+
+<div class="modal hide" id="licenseModal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3>License</h3>
+  </div>
+  <div class="modal-body">
+    <p>This website is in the public domain, but if you want to be a lovely bean/person/cat/whatever-you-wish-to-be please link back here with something like:</p>
+	<pre>&lt;a href="http://kennydude.github.com/data/"&gt;Uses free datasets by @kennydude ^__^&lt;/a&gt;</pre>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+  </div>
+</div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<!-- We're on GH pages anyway! -->
+	<script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="http://sharenice.org/code.js"></script>
+{{ page.scripts }}
 
   </body>
 </html>

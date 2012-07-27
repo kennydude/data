@@ -30,7 +30,9 @@ function doEvents(){
 var cellTemplate = "<input type='text' value='{{ name }}' class='editmode columneditbox' /><span class='noneditmode'>{{ name }}</span>";
 var columnTemplate = cellTemplate + '<i class="icon-plus-sign add-to-encode noneditmode"></i>';
 
-$(document).ready(function(){
+$(document).ready(function(){ setTimeout( start, 400 ); });
+
+function start(){
 	if($("#rawcode").length == 0){ return; }
 	var obj = $.parseJSON($("#rawcode").hide().text());
 
@@ -115,7 +117,7 @@ $(document).ready(function(){
 		$("#output").html(output);
 	});
 	$(".pleasewait").hide();
-});
+}
 
 // From JSONLint.com
 // https://github.com/umbrae/jsonlintdotcom/blob/master/c/js/jsl.format.js
