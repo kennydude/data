@@ -1,6 +1,7 @@
 ---
 layout: entry
 title: HESA/UCAS Conversion
+description: Convert between the HESA ID for Universities and UCAS codes (where they exist)
 ---
 {
     "fields": [

@@ -44,6 +44,12 @@ scripts: >
 		</tr>
 	</thead>
 </table>
+<hr/>
+<div class="btn-group">
+<a class="editMode btn">Edit Mode</a>
+<a class="export btn">Export JSON</a>
+</div>
+<hr/>
 
 <a id="encode"></a><br/><br/>
 <div class="well span4 offset4">
@@ -61,6 +67,24 @@ scripts: >
 	<span class="saveFormatted hide">
 	<a class="btn saveFormatted hide">Save formatted data as file</a><br/><br/></span>
 	<pre id="output">Press the GO button and the formatted data will appear here</pre>
+</div>
+
+<div class="modal hide" id="advModModal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3>Modify Column</h3>
+  </div>
+  <div class="modal-body">
+    <p>You can modify the selected column using the Javascript Variable <code>value</code> <a class="btn" id="advModExample">Load Example</a></p>
+	<textarea id="advModScript" style="font-family:monospace;width:100%;height:200px"></textarea>
+<hr/>
+<a class="btn" id="advModTest">Test</a><br/><br/>
+<pre id="advTestArea">Test results here</pre>
+  </div>
+  <div class="modal-footer">
+	<a class="btn btn-primary" id="advModApply">Apply</a>
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+  </div>
 </div>
 
 <div class="modal hide" id="exportModal">

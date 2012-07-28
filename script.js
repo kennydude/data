@@ -5,6 +5,13 @@ function setEModeStyle(s){
 	$("<style>").attr("id", "eMode").html(s).appendTo($("head"));
 }
 
+function goodbye(e) {
+	if(!inEditMode) return;
+	
+	return "You are in Edit Mode. You may loose your changes";
+}
+window.onbeforeunload=goodbye;
+
 function toggleEditMode(){
 	inEditMode = !inEditMode;
 	if(inEditMode){
@@ -25,16 +32,69 @@ function doEvents(){
 	$(".add-to-encode").click(function(){
 		$("#enter").val( $("#enter").val() + "{{ " + $("input", $(this).parent()).val() + " }}" ).focus();
 	}).css("cursor", "pointer");
+	$(".datahead.top .icon-filter").click(function(){
+		$("#advModModal").data("column", $(".datahead.top th").index($(this).parent().get(0)) ).modal("show");
+	});
+	$(".datahead.bottom .icon-filter").click(function(){
+		$("#advModModal").data("column", $(".datahead.bottom th").index($(this).parent().get(0)) ).modal("show");
+	});
+	$(".datahead.top input").on("keyup", function(){
+		$( $(".datahead.bottom input").get( $(".datahead.top th").index( $(this).parent() ) )).val($(this).val());
+	});
+	$(".datahead.bottom input").on("keyup", function(){
+		$( $(".datahead.top input").get( $(".datahead.bottom th").index( $(this).parent() ) )).val($(this).val());
+	});
+}
+
+function collectColumn(column){
+	data = [];
+	$("#body tr.entry").each(function(){
+		data[data.length] = $($("td", this).get(column)).text();
+	});
+	return data;
+}
+
+function applyFilter(filter, column){
+	data = collectColumn(column);
+	outdata = [];
+	var sortFunc = new Function("value", filter  + ";return value;");
+	for(k in data){
+		v = data[k];
+		v = sortFunc(v);
+		outdata[k] = v;
+	}
+	return outdata;
 }
 
 var cellTemplate = "<input type='text' value='{{ name }}' class='editmode columneditbox' /><span class='noneditmode'>{{ name }}</span>";
-var columnTemplate = cellTemplate + '<i class="icon-plus-sign add-to-encode noneditmode"></i>';
+var columnTemplate = cellTemplate + '<i class="icon-plus-sign add-to-encode noneditmode"></i><i class="editmode icon-filter" style="cursor:pointer" title="Advanced Edit"></i>';
 
 $(document).ready(function(){ setTimeout( start, 400 ); });
 
 function start(){
 	if($("#rawcode").length == 0){ return; }
 	var obj = $.parseJSON($("#rawcode").hide().text());
+
+	$("#advModExample").click(function(){
+		$("#advModScript").val('value = value + " that\'s funny";');
+	});
+	$("#advModApply").click(function(){
+		data = applyFilter( $("#advModScript").val(), $("#advModModal").data("column") );
+		for(k in data){
+			ar = {"name" : data[k]};
+			$($("td",$("#body tr.entry").get(k)).get( $("#advModModal").data("column") )).html(Mustache.render(cellTemplate, ar));
+		}
+		$("#advModModal").modal("hide");
+	});
+	$("#advModTest").click(function(){
+		data = collectColumn( $("#advModModal").data("column") );
+		output = "";
+		newdata = applyFilter( $("#advModScript").val(), $("#advModModal").data("column") );
+		for(k in data){
+			output += data[k] + " => " + newdata[k] + "\n";
+		}
+		$("#advTestArea").html( output );
+	});
 
 	$(".export").click(function(){
 		$("#exportModal").modal("show");
