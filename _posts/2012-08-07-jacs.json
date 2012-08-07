@@ -1,0 +1,550 @@
+---
+title: JACS Code
+layout: entry
+description: Joint Academic Classification of Subjects from HESA.
+   Source https://en.wikipedia.org/wiki/Joint_Academic_Classification_of_Subjects
+---
+{
+    "fields": [
+        "Letter",
+        "Subject Group",
+        "Code",
+        "Subgroup"
+    ],
+    "data": [
+        [
+            "A",
+            "Medicine and Dentistry",
+            "A100",
+            "Pre-clinical Medicine"
+        ],
+        [
+            "A",
+            "Medicine and Dentistry",
+            "A200",
+            "Pre-clinical Dentistry"
+        ],
+        [
+            "A",
+            "Medicine and Dentistry",
+            "A300",
+            "Clinical Medicine"
+        ],
+        [
+            "A",
+            "Medicine and Dentistry",
+            "A400",
+            "Clinical Dentistry"
+        ],
+        [
+            "B",
+            "Subjects allied to Medicine",
+            "B100",
+            "Anatomy, Physiology and Pathology"
+        ],
+        [
+            "B",
+            "Subjects allied to Medicine",
+            "B200",
+            "Pharmacology"
+        ],
+        [
+            "B",
+            "Subjects allied to Medicine",
+            "B300",
+            "Toxicology and Pharmacy"
+        ],
+        [
+            "B",
+            "Subjects allied to Medicine",
+            "B400",
+            "Nutrition"
+        ],
+        [
+            "B",
+            "Subjects allied to Medicine",
+            "B500",
+            "Ophthalmics"
+        ],
+        [
+            "B",
+            "Subjects allied to Medicine",
+            "B600",
+            "Aural and Oral Sciences"
+        ],
+        [
+            "B",
+            "Subjects allied to Medicine",
+            "B700",
+            "Nursing"
+        ],
+        [
+            "B",
+            "Subjects allied to Medicine",
+            "B800",
+            "Medical Technology"
+        ],
+        [
+            "C",
+            "Biological Sciences",
+            "C100",
+            "Biology"
+        ],
+        [
+            "C",
+            "Biological Sciences",
+            "C200",
+            "Botany"
+        ],
+        [
+            "C",
+            "Biological Sciences",
+            "C300",
+            "Zoology"
+        ],
+        [
+            "C",
+            "Biological Sciences",
+            "C400",
+            "Genetics"
+        ],
+        [
+            "C",
+            "Biological Sciences",
+            "C500",
+            "Microbiology"
+        ],
+        [
+            "C",
+            "Biological Sciences",
+            "C600",
+            "Sports Science"
+        ],
+        [
+            "C",
+            "Biological Sciences",
+            "C800",
+            "Psychology"
+        ],
+        [
+            "D",
+            "Veterinary Sciences, Agriculture and related subjects",
+            "D100",
+            "Pre-clinical Veterinary Medcine"
+        ],
+        [
+            "D",
+            "Veterinary Sciences, Agriculture and related subjects",
+            "D400",
+            "Argiculture"
+        ],
+        [
+            "D",
+            "Veterinary Sciences, Agriculture and related subjects",
+            "D500",
+            "Forestry"
+        ],
+        [
+            "D",
+            "Veterinary Sciences, Agriculture and related subjects",
+            "D600",
+            "Food and Beverage Studies"
+        ],
+        [
+            "F",
+            "Physical Sciences",
+            "F100",
+            "Chemistry"
+        ],
+        [
+            "F",
+            "Physical Sciences",
+            "F200",
+            "Materials Science"
+        ],
+        [
+            "F",
+            "Physical Sciences",
+            "F300",
+            "Physics"
+        ],
+        [
+            "F",
+            "Physical Sciences",
+            "F400",
+            "Forensics and Archaeology"
+        ],
+        [
+            "F",
+            "Physical Sciences",
+            "F600",
+            "Geology"
+        ],
+        [
+            "F",
+            "Physical Sciences",
+            "F700",
+            "Ocean Sciences"
+        ],
+        [
+            "F",
+            "Physical Sciences",
+            "F800",
+            "Physical and Terrestrial Geographical and Environmental Sciences"
+        ],
+        [
+            "F",
+            "Physical Sciences",
+            "F840",
+            "Physical Geography"
+        ],
+        [
+            "G",
+            "Mathematical and Computer Sciences",
+            "G100",
+            "Mathematics"
+        ],
+        [
+            "G",
+            "Mathematical and Computer Sciences",
+            "G300",
+            "Statistics"
+        ],
+        [
+            "G",
+            "Mathematical and Computer Sciences",
+            "G400",
+            "Computer Science"
+        ],
+        [
+            "G",
+            "Mathematical and Computer Sciences",
+            "G600",
+            "Software Engineering"
+        ],
+        [
+            "G",
+            "Mathematical and Computer Sciences",
+            "G700",
+            "Artificial Intelligence"
+        ],
+        [
+            "H",
+            "Engineering",
+            "H200",
+            "Civil"
+        ],
+        [
+            "H",
+            "Engineering",
+            "H300",
+            "Mechanical"
+        ],
+        [
+            "H",
+            "Engineering",
+            "H400",
+            "Aerospace"
+        ],
+        [
+            "H",
+            "Engineering",
+            "H500",
+            "Naval Architecture"
+        ],
+        [
+            "H",
+            "Engineering",
+            "H700",
+            "Production and Manufacutring"
+        ],
+        [
+            "H",
+            "Engineering",
+            "H800",
+            "Chemical"
+        ],
+        [
+            "J",
+            "Technologies",
+            "J200",
+            "Metallurgy"
+        ],
+        [
+            "J",
+            "Technologies",
+            "J300",
+            "Ceramics and Glasses"
+        ],
+        [
+            "J",
+            "Technologies",
+            "J400",
+            "Polymers and Textiles"
+        ],
+        [
+            "J",
+            "Technologies",
+            "J500",
+            "Materials Technology"
+        ],
+        [
+            "K",
+            "Architecture, Building and Planning",
+            "K100",
+            "Architecture"
+        ],
+        [
+            "K",
+            "Architecture, Building and Planning",
+            "K200",
+            "Building"
+        ],
+        [
+            "K",
+            "Architecture, Building and Planning",
+            "K400",
+            "Planning"
+        ],
+        [
+            "L",
+            "Social studies",
+            "L100",
+            "Economics"
+        ],
+        [
+            "L",
+            "Social studies",
+            "L200",
+            "Politics"
+        ],
+        [
+            "L",
+            "Social studies",
+            "L300",
+            "Sociology"
+        ],
+        [
+            "L",
+            "Social studies",
+            "L400",
+            "Social Policy"
+        ],
+        [
+            "L",
+            "Social studies",
+            "L500",
+            "Social Work"
+        ],
+        [
+            "L",
+            "Social studies",
+            "L600",
+            "Anthropology"
+        ],
+        [
+            "L",
+            "Social studies",
+            "L700",
+            "Human and Social Geography"
+        ],
+        [
+            "M",
+            "Law",
+            "M100",
+            "Law by geographical area"
+        ],
+        [
+            "M",
+            "Law",
+            "M200",
+            "Law by topic"
+        ],
+        [
+            "N",
+            "Business and Administrative studies",
+            "N100",
+            "Business Studies"
+        ],
+        [
+            "N",
+            "Business and Administrative studies",
+            "N200",
+            "Management"
+        ],
+        [
+            "N",
+            "Business and Administrative studies",
+            "N400",
+            "Accounting"
+        ],
+        [
+            "N",
+            "Business and Administrative studies",
+            "N300",
+            "Finance"
+        ],
+        [
+            "N",
+            "Business and Administrative studies",
+            "N500",
+            "Marketing"
+        ],
+        [
+            "P",
+            "Mass Communications and Documentation",
+            "P300",
+            "Media Studies"
+        ],
+        [
+            "P",
+            "Mass Communications and Documentation",
+            "P500",
+            "Journalism"
+        ],
+        [
+            "Q",
+            "Linguistics, Classics and related subjects",
+            "Q100",
+            "Linguistics"
+        ],
+        [
+            "Q",
+            "Linguistics, Classics and related subjects",
+            "Q500",
+            "Celtic Studies"
+        ],
+        [
+            "R",
+            "European Languages, Literature and related subjects",
+            "R100",
+            "French Studies"
+        ],
+        [
+            "R",
+            "European Languages, Literature and related subjects",
+            "R200",
+            "German Studies"
+        ],
+        [
+            "R",
+            "European Languages, Literature and related subjects",
+            "R300",
+            "Italian Studies"
+        ],
+        [
+            "R",
+            "European Languages, Literature and related subjects",
+            "R400",
+            "Hispanic Studies"
+        ],
+        [
+            "R",
+            "European Languages, Literature and related subjects",
+            "R600",
+            "Scandinavian Studies"
+        ],
+        [
+            "R",
+            "European Languages, Literature and related subjects",
+            "R700",
+            "Russian Studies"
+        ],
+        [
+            "T",
+            "Eastern, Asiatic, African, American and Australasian Languages, Literature and related subjects",
+            "T100",
+            "Chinese Studies"
+        ],
+        [
+            "T",
+            "Eastern, Asiatic, African, American and Australasian Languages, Literature and related subjects",
+            "T500",
+            "African Studies"
+        ],
+        [
+            "V",
+            "Historical and Philosophical studies",
+            "V100",
+            "History by period"
+        ],
+        [
+            "V",
+            "Historical and Philosophical studies",
+            "V200",
+            "History by era"
+        ],
+        [
+            "V",
+            "Historical and Philosophical studies",
+            "V350",
+            "History of Art"
+        ],
+        [
+            "V",
+            "Historical and Philosophical studies",
+            "V500",
+            "Philosophy"
+        ],
+        [
+            "V",
+            "Historical and Philosophical studies",
+            "V600",
+            "Theology and Religious Studies"
+        ],
+        [
+            "W",
+            "Creative Arts and Design",
+            "W100",
+            "Fine Art"
+        ],
+        [
+            "W",
+            "Creative Arts and Design",
+            "W200",
+            "Design"
+        ],
+        [
+            "W",
+            "Creative Arts and Design",
+            "W300",
+            "Music"
+        ],
+        [
+            "W",
+            "Creative Arts and Design",
+            "W400",
+            "Drama"
+        ],
+        [
+            "W",
+            "Creative Arts and Design",
+            "W500",
+            "Dance"
+        ],
+        [
+            "W",
+            "Creative Arts and Design",
+            "W600",
+            "Cinematics and Photography"
+        ],
+        [
+            "W",
+            "Creative Arts and Design",
+            "W700",
+            "Crafts"
+        ],
+        [
+            "W",
+            "Creative Arts and Design",
+            "W800",
+            "Creative Writing"
+        ],
+        [
+            "X",
+            "Education",
+            "X100",
+            "Training Teachers"
+        ]
+    ]
+}

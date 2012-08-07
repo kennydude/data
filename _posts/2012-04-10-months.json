@@ -1,6 +1,7 @@
 ---
 layout: entry
 title: Months
+description: Months of the year
 ---
 {
 	"fields" : ["Month"],

@@ -829,6 +829,11 @@ description: Convert between the HESA ID for Universities and UCAS codes (where 
             "0209",
             "The Liverpool Institute for Performing Arts",
             "L48"
+        ],
+        [
+            "0210",
+            "UC Suffolk",
+            "S82"
         ]
     ]
 }
