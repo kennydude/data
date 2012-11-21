@@ -69,16 +69,17 @@ function applyFilter(filter, column){
 var cellTemplate = "<input type='text' value='{{ name }}' class='editmode columneditbox' /><span class='noneditmode'>{{ name }}</span>";
 var columnTemplate = cellTemplate + '<i class="icon-plus-sign add-to-encode noneditmode"></i><i class="editmode icon-filter" style="cursor:pointer" title="Advanced Edit"></i>';
 
-$(document).ready(function(){ setTimeout( start, 400 ); });
+setTimeout( start, 400 );
 
 function start(){
-	if($("#rawcode").length == 0){ return; }
-	var obj = $.parseJSON($("#rawcode").hide().text());
+	if($("rawcode") == null){ return; }
+    $("rawcode").addClass("hide");
+	var obj = JSON.parse($("rawcode").get("html"));
 
-	$("#advModExample").click(function(){
+	$("advModExample").addEvent("click", function(){
 		$("#advModScript").val('value = value + " that\'s funny";');
 	});
-	$("#advModApply").click(function(){
+	$("advModApply").addEvent("click", function(){
 		data = applyFilter( $("#advModScript").val(), $("#advModModal").data("column") );
 		for(k in data){
 			ar = {"name" : data[k]};
@@ -86,7 +87,7 @@ function start(){
 		}
 		$("#advModModal").modal("hide");
 	});
-	$("#advModTest").click(function(){
+	$("advModTest").addEvent("click", function(){
 		data = collectColumn( $("#advModModal").data("column") );
 		output = "";
 		newdata = applyFilter( $("#advModScript").val(), $("#advModModal").data("column") );
@@ -96,7 +97,7 @@ function start(){
 		$("#advTestArea").html( output );
 	});
 
-	$(".export").click(function(){
+	$$(".export").addEvent("click", function(){
 		$("#exportModal").modal("show");
 		var output = { "fields" : [], "data" : [] };
 
@@ -104,7 +105,7 @@ function start(){
 			output.fields[output.fields.length] = $(this).text();
 		});
 		
-		$("#body tr.entry").each( function(){
+		$$("#body tr.entry").each( function(){
 			var myrow = [];
 			$("td span", this).each(function(){
 				myrow[myrow.length] = $(this).text();
@@ -117,9 +118,9 @@ function start(){
 	});	
 	
 	toggleEditMode();
-	$(".editMode").click(toggleEditMode);
-	$(".closeEditMode").click(toggleEditMode);
-	$(".addNewColumn").click(function(){
+	$(".editMode").addEvent("click", toggleEditMode);
+	$(".closeEditMode").addEvent("click", toggleEditMode);
+	$(".addNewColumn").addEvent("click", function(){
 		ar = { "name" : "New" };
 		t = $("<th class='header'>").html(Mustache.render(columnTemplate, ar)).insertBefore($(".datahead .addNewColumn"));
 		i = $(".datahead").index(t);
@@ -134,7 +135,7 @@ function start(){
 		$("#newRowCell").attr("colspan", $("#newRowCell").attr("colspan")+1);
 		doEvents();
 	});
-	$("#newRowCell").click(function(){
+	$("#newRowCell").addEvent("click", function(){
 		t = $("<tr class='entry'>").insertBefore(".newrow");
 		$(".datahead.top th.header").each(function(){
 			ar = {"name": ""};
@@ -142,8 +143,7 @@ function start(){
 		});
 	});
 	
-	$.each(obj.fields, function(i){
-		field = obj.fields[i];
+	obj.fields.forEach(function(field){
 		ar = { "name" : field };
 		t = $("<th class='header'>").html(Mustache.render(columnTemplate, ar)).insertBefore(".datahead .addNewColumn");
 		$("#newRowCell").attr("colspan", $("#newRowCell").attr("colspan")+1);
