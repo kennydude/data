@@ -1,5 +1,6 @@
 ---
 layout: default
+entry_mode: True
 scripts: >
  <script type="text/javascript" src="mustache.js"></script>
  <script type="text/javascript" src="script.js"></script>
@@ -21,7 +22,7 @@ scripts: >
 <hr/>
 <div id="rawcode">{{ page.content }}</div>
 
-<table id="data" class="table table-striped table-bordered table-condensed">
+<table id="data" class="table twelve">
 	<thead>
 		<tr class="datahead top">
 			<td class="editmode addNewColumn" style="cursor:pointer">
@@ -52,12 +53,12 @@ scripts: >
 <hr/>
 
 <a id="encode"></a><br/><br/>
-<div class="well span4 offset4">
+<div class="panel six columns centered">
 	<h1>Encode the data</h1>
 	<p>
 		Enter in the field how you want the data to look using <code>{<span>{ FIELDNAME }</span>}</code> where FIELDNAME is one of the headers on the table above. Then press the Go button. This uses <a href="http://mustache.github.com">mustache</a> templating engine
 	</p>
-	<div class="alert alert-warning">
+	<div class="alert-box alert">
 		<strong>Warning: It is case sensitive.</strong>
 			You can use the <i class="icon-plus-sign"></i> icons to add them straight into the text box
 	</div>
@@ -70,31 +71,21 @@ scripts: >
 </div>
 
 <div class="modal hide" id="advModModal">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">×</button>
-    <h3>Modify Column</h3>
-  </div>
-  <div class="modal-body">
-    <p>You can modify the selected column using the Javascript Variable <code>value</code> <a class="btn" id="advModExample">Load Example</a></p>
-	<textarea id="advModScript" style="font-family:monospace;width:100%;height:200px"></textarea>
-<hr/>
-<a class="btn" id="advModTest">Test</a><br/><br/>
-<pre id="advTestArea">Test results here</pre>
-  </div>
-  <div class="modal-footer">
-	<a class="btn btn-primary" id="advModApply">Apply</a>
-    <a href="#" class="btn" data-dismiss="modal">Close</a>
-  </div>
+	<div style="overflow-y: auto; height: 400px;">
+		<p>You can modify the selected column using the Javascript Variable <code>value</code></p>
+		<p><a class="button small advModExample">Load Example</a></p>
+		<textarea class="advModScript" style="font-family:monospace;width:100%;height:200px"></textarea>
+		<hr/>
+		<a class="button small advModTest">Test</a><br/><br/>
+		<pre class="advTestArea">Test results here</pre>
+	</div>
 </div>
 
 <div class="modal hide" id="exportModal">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">×</button>
-    <h3>Export JSON</h3>
-  </div>
-  <div class="modal-body">
-    <p>You can now pull this into a .json file under the <code>_posts</code> directory on the databin. <a class="exportFile btn" target="_blank">Open as savable file</a></p>
-<pre id="exportContent"></pre>
+    <p>You can now pull this into a .json file under the <code>_posts</code> directory on the databin.</p>
+    <p>
+   	<a class="exportFile button small" target="_blank">Open as savable file</a></p>
+<pre class="exportContent" style="height: 160px;overflow: scroll"></pre>
 <hr/>
 <p>Notes: You'll need this at the header for it to work properly with Jekyll</p>
 <pre>---
@@ -103,8 +94,4 @@ title: Title
 description: Description
 ---
 </pre>
-  </div>
-  <div class="modal-footer">
-    <a href="#" class="btn" data-dismiss="modal">Close</a>
-  </div>
 </div>

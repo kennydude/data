@@ -15,11 +15,11 @@ window.onbeforeunload=goodbye;
 function toggleEditMode(){
 	inEditMode = !inEditMode;
 	if(inEditMode){
-		$(".editMode").addClass("active");
+		$(".editMode").addClass("success");
 		setEModeStyle('.noneditmode{ display: none !important; }');
 		$("body").addClass("editmode");
 	} else{
-		$(".editMode").removeClass("active");
+		$(".editMode").removeClass("success");
 		setEModeStyle('.editmode{ display: none !important; }');
 		$(".columneditbox").each(function(){
 			$("span", $(this).parent()).html($(this).val());
@@ -28,16 +28,43 @@ function toggleEditMode(){
 	}
 }
 
+function doAdvModal(){
+    new SimpleModal( {
+        "title" : "Advanced Edit",
+        "contents" : $("#advModModal").html(),
+        "btn_ok" : "Save",
+        "onOkay" : function(){
+            console.log("onokay");
+            data = applyFilter( $("#simpleModal .advModScript").val(), $("#simpleModal").data("column") );
+            for(k in data){
+                ar = {"name" : data[k]};
+                $($("td",$("#body tr.entry").get(k)).get( $("#simpleModal").data("column") )).html(Mustache.render(cellTemplate, ar));
+            }
+            //$("#simpleModal #advModModal").modal("hide");
+        }
+    });
+    $("#simpleModal").data("column", $(".datahead.top th").index($(this).parent().get(0)) );
+
+    $("#simpleModal .advModExample").on("click", function(){
+        $("#simpleModal .advModScript").val('value = value + " that\'s funny";');
+    });
+    $("#simpleModal .advModTest").on("click", function(){
+        data = collectColumn( $("#simpleModal").data("column") );
+        output = "";
+        newdata = applyFilter( $("#simpleModal .advModScript").val(), $("#simpleModal").data("column") );
+        for(k in data){
+            output += data[k] + " => " + newdata[k] + "\n";
+        }
+        $("#simpleModal .advTestArea").html( output );
+    });
+}
+
 function doEvents(){
 	$(".add-to-encode").click(function(){
 		$("#enter").val( $("#enter").val() + "{{ " + $("input", $(this).parent()).val() + " }}" ).focus();
 	}).css("cursor", "pointer");
-	$(".datahead.top .icon-filter").click(function(){
-		$("#advModModal").data("column", $(".datahead.top th").index($(this).parent().get(0)) ).modal("show");
-	});
-	$(".datahead.bottom .icon-filter").click(function(){
-		$("#advModModal").data("column", $(".datahead.bottom th").index($(this).parent().get(0)) ).modal("show");
-	});
+	$(".datahead.top .icon-filter").click(doAdvModal);
+	$(".datahead.bottom .icon-filter").click(doAdvModal);
 	$(".datahead.top input").on("keyup", function(){
 		$( $(".datahead.bottom input").get( $(".datahead.top th").index( $(this).parent() ) )).val($(this).val());
 	});
@@ -67,45 +94,25 @@ function applyFilter(filter, column){
 }
 
 var cellTemplate = "<input type='text' value='{{ name }}' class='editmode columneditbox' /><span class='noneditmode'>{{ name }}</span>";
-var columnTemplate = cellTemplate + '<i class="icon-plus-sign add-to-encode noneditmode"></i><i class="editmode icon-filter" style="cursor:pointer" title="Advanced Edit"></i>';
+var columnTemplate = cellTemplate + '<img src="img/add.png" class="add-to-encode noneditmode img" /><img class="editmode icon-filter img" src="img/filter.png" style="cursor:pointer" title="Advanced Edit" />';
 
 setTimeout( start, 400 );
 
 function start(){
-	if($("rawcode") == null){ return; }
-    $("rawcode").addClass("hide");
-	var obj = JSON.parse($("rawcode").get("html"));
+    $(".editmode").removeClass("hide");
+	if($("#rawcode").size() == 0){ return; }
+    $("#rawcode").addClass("hide");
+	var obj = JSON.parse($("#rawcode").html());
 
-	$("advModExample").addEvent("click", function(){
-		$("#advModScript").val('value = value + " that\'s funny";');
-	});
-	$("advModApply").addEvent("click", function(){
-		data = applyFilter( $("#advModScript").val(), $("#advModModal").data("column") );
-		for(k in data){
-			ar = {"name" : data[k]};
-			$($("td",$("#body tr.entry").get(k)).get( $("#advModModal").data("column") )).html(Mustache.render(cellTemplate, ar));
-		}
-		$("#advModModal").modal("hide");
-	});
-	$("advModTest").addEvent("click", function(){
-		data = collectColumn( $("#advModModal").data("column") );
-		output = "";
-		newdata = applyFilter( $("#advModScript").val(), $("#advModModal").data("column") );
-		for(k in data){
-			output += data[k] + " => " + newdata[k] + "\n";
-		}
-		$("#advTestArea").html( output );
-	});
-
-	$$(".export").addEvent("click", function(){
-		$("#exportModal").modal("show");
+	$(".export").on("click", function(){
+		new SimpleModal({ "title" : "Export", "contents" : $("#exportModal").html() });
 		var output = { "fields" : [], "data" : [] };
 
 		$(".datahead.top th.header").each( function(){
 			output.fields[output.fields.length] = $(this).text();
 		});
 		
-		$$("#body tr.entry").each( function(){
+		$("#body tr.entry").each( function(){
 			var myrow = [];
 			$("td span", this).each(function(){
 				myrow[myrow.length] = $(this).text();
@@ -113,14 +120,14 @@ function start(){
 			output.data[output.data.length] = myrow;
 		});
 		output = formatJson( JSON.stringify(output) );
-		$("#exportContent").html(output);
+		$("#simpleModal .exportContent").html(output);
 		$(".exportFile").attr("href", "data:text/plain;base64," + base64_encode( output ) );
 	});	
 	
 	toggleEditMode();
-	$(".editMode").addEvent("click", toggleEditMode);
-	$(".closeEditMode").addEvent("click", toggleEditMode);
-	$(".addNewColumn").addEvent("click", function(){
+	$(".editMode").on("click", toggleEditMode);
+	$(".closeEditMode").on("click", toggleEditMode);
+	$(".addNewColumn").on("click", function(){
 		ar = { "name" : "New" };
 		t = $("<th class='header'>").html(Mustache.render(columnTemplate, ar)).insertBefore($(".datahead .addNewColumn"));
 		i = $(".datahead").index(t);
@@ -135,7 +142,7 @@ function start(){
 		$("#newRowCell").attr("colspan", $("#newRowCell").attr("colspan")+1);
 		doEvents();
 	});
-	$("#newRowCell").addEvent("click", function(){
+	$("#newRowCell").on("click", function(){
 		t = $("<tr class='entry'>").insertBefore(".newrow");
 		$(".datahead.top th.header").each(function(){
 			ar = {"name": ""};
@@ -143,7 +150,8 @@ function start(){
 		});
 	});
 	
-	obj.fields.forEach(function(field){
+	$.each(obj.fields, function(i){
+        field = obj.fields[i];
 		ar = { "name" : field };
 		t = $("<th class='header'>").html(Mustache.render(columnTemplate, ar)).insertBefore(".datahead .addNewColumn");
 		$("#newRowCell").attr("colspan", $("#newRowCell").attr("colspan")+1);

@@ -79,6 +79,7 @@
   font-weight: bold;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 36px;
+  text-align: center;
 }
 .simple-modal a.close {
   position: absolute;
