@@ -13,7 +13,7 @@ function SimpleModal(opt){
 
 	$("#simpleModal").html('<div class="simple-modal-header"><h1 class="title">{_TITLE_}</h1></div>' + 
 							'<div class="simple-modal-body"><div class="contents">{_CONTENTS_}</div></div>' +
-							'<div class="simple-modal-footer"></div>');
+							'<div class="simple-modal-footer"></div>').css("position", "fixed");
 
 	$("#simpleModal").show().css("opacity", "1").css("width", opt.width  +"px");
 	$("#simpleModal .title").html(opt['title']);
